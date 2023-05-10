@@ -46,7 +46,6 @@ const httpRequestListener = function(request, response) {
             response.writeHead(200, { // http status code, 오류 없이 서버에서 처리가 정상적이면 200코드를 담아서 응답헤더 설정
                 "Content-Type": "application/json" // 응답 body에 담기는 컨텐츠의 타입이 json형식임을 정의
             }); 
-        
             response.end(JSON.stringify({message: 'pong'})); // 객체를 응답 body에 담아서 client에 반환
         }
     } // 회원가입
