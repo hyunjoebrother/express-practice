@@ -9,7 +9,7 @@ const users = [
     {
         id: 1,
         name: 'Mei',
-        email: 'hyunjoe31@gmail.com',
+        email: 'mei@gmail.com',
         password: '980831',
     },
     {
@@ -49,40 +49,30 @@ const httpRequestListener = function(request, response) {
         
             response.end(JSON.stringify({message: 'pong'})); // 객체를 응답 body에 담아서 client에 반환
         }
-        // // 나머지 end point
-        // else {
-        //     response.writeHead(200, { // http status code, 오류 없이 서버에서 처리가 정상적이면 200코드를 담아서 응답헤더 설정
-        //         "Content-Type": "application/json" // 응답 body에 담기는 컨텐츠의 타입이 json형식임을 정의
-        //     }); 
-        
-        //     response.end(JSON.stringify({message: 'Hello World!'})); // 객체를 응답 body에 담아서 client에 반환
-        // }
-        // 회원가입
-        else if (method === 'POST') {
-            if(url === '/users') {
-                let body = '';
-                request.on('data', (data) => {
-                    body += data;
+    } // 회원가입
+    else if (method === 'POST') {
+        if(url === '/users') {
+            let body = '';
+            request.on('data', (data) => {
+                body += data;
+            });
+            // stream을 전부 받아온 이후에 실행
+            request.on('end', ()=>{
+                const user = JSON.parse(body);
+
+                users.push({
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    password: user.password,
                 })
-
-                // stream을 전부 받아온 이후에 실행
-                request.on('end', ()=>{
-                    const user = JSON.parse(body);
-
-                    users.push({
-                        id: user.id,
-                        name: user.name,
-                        email: user.email,
-                        password: user.password
-
-                    })
-
-                    response.end(JSON.stringify({message: '회원가입 완료'}));
-                })
-            }
+                response.writeHead(200, {
+                    "Content-Type": "application/json"
+                }); 
+                response.end(JSON.stringify({ message: 'lollol' }));
+            });
         }
     };
-    
 };
 
 // http request가 발생하면 httpRequestListener 함수가 실행될 수 있도록
