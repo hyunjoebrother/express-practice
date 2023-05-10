@@ -12,7 +12,9 @@ const port = 3000;
 // req는 요청객체, res는 응답객체
 app.get("/", (req, res) => {
     // 응답 콜백 함수
-    res.send("Hello World!")
+    // res.send("Hello World!")
+    // __dirname : 절대경로
+    res.sendFile(__dirname+"/src/index.html")
 })
 
 //// 미들웨어
