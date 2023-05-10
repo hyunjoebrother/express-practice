@@ -17,6 +17,24 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname+"/src/index.html")
 })
 
+//// POST 작업
+// 먼저 import
+const bodyParser = require("body-parser")
+
+//// 미들웨어
+// 브라우저에서 오는 응답이 JSON이 아닐수도 있으니 urlencoded() 추가
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+
+app.post("/post", (req, res) => {
+    // 브라우저에서 받은 데이터는 req.body에 저장
+    res.send("<h1>성공</h1>" + req.body.input)
+})
+
+
+
 //// 미들웨어
 // port에 접속 성공하면 콜백함수 실행
 app.listen(port, () => {
