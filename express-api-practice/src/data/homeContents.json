@@ -1,0 +1,59 @@
+{
+    "home": {
+        "promoCards": [
+            {
+                "title": "Lecker Burger",
+                "address": "Cheesy pizza 30% off and you get a second free",
+                "image": "https://d3i4yxtzktqr9n.cloudfront.net/web-eats/static/images/homepage/burger-image-550-0f1a479683.png",
+                "rigthWidget": "OPEN",
+                "leftWidget": "4.5"
+            },
+            {
+                "title": "Joe's Pizza",
+                "address": "57 King St, Sydney NSW 2000",
+                "rigthWidget": "CLOSED",
+                "image": "https://greenwich-pizza-cdn.tillster.com/6fa30d87-fb0c-47ac-ab47-0fa59d59ade0.png",
+                "leftWidget": "3.2"
+            },
+            {
+                "title": "Buchada da Maria",
+                "address": "90 Rider Blvd, Rhodes NSW 2138",
+                "image": "https://1.bp.blogspot.com/_Giw16-7L200/R5-eEtcI5ZI/AAAAAAAAAAg/OSkLrGFtiKI/s320/atolado.png",
+                "rigthWidget": "OPEN",
+                "leftWidget": "1.2"
+            },
+            {
+                "title": "Podrão do Zé",
+                "address": "Av. Borborema, 140-244 - Calhau, São Luís - MA",
+                "image": "http://www.carneirododiniz.com.br/slipara/images/buchada_de_caneiro.png",
+                "rigthWidget": "OPEN",
+                "leftWidget": "0"
+            },
+            {
+                "title": "Bike Lanche",
+                "address": "Unknow location",
+                "image": "https://pngimage.net/wp-content/uploads/2018/06/pastel-e-caldo-de-cana-png.png",
+                "rigthWidget": "OPEN",
+                "leftWidget": "5"
+            }
+        ],
+        "categoryCards": [
+            {
+                "title": "Pizza",
+                "image": "http://s3-ap-southeast-2.amazonaws.com/urban-purveyor/famous/wp-content/uploads/2018/11/meatball.png"
+            },
+            {
+                "title": "Burger",
+                "image": "https://d3i4yxtzktqr9n.cloudfront.net/web-eats/static/images/homepage/burger-image-550-0f1a479683.png"
+            },
+            {
+                "title": "Brazilian",
+                "image": "https://media.danmurphys.com.au/dmo/product/908288-1.png"
+            },
+            {
+                "title": "Asian",
+                "image": "https://i.dlpng.com/static/png/210361_preview.png"
+            }
+        ]
+    }
+}
