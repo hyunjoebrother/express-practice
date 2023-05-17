@@ -59,3 +59,20 @@ typings/
 
 # next.js build output
 .next
+
+
+#### Sequelize Project 
+config/
+member.js
+admin_user.js
+wallet.js
+asset.js
+auth_key.js
+admin_auth_key.js
+access_history.js
+admin_access.js
+state.js
+balance.js
+deposit.js
+withdrawal.js
+document.js
